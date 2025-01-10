@@ -6,7 +6,7 @@
 ### Reusable project for frontend devs (***pre-configured***).
 ### Clone 
 ``` 
-git clone https://utmp/vue-vite-tw.git
+git clone https://github.com/utmp/vue-vite-tw.git
 ```
 ### Intall
 ```
