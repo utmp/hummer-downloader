@@ -13,11 +13,11 @@ npm install
 ```
 npm run dev
 ```
+### Server
+```
+npm run server
+```
 ### Preview
 ```
 npm run preview
-```
-### Package
-```
-npm run build
 ```
