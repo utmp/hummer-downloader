@@ -13,8 +13,12 @@ const store = createStore({
     getVideoData: (state) => state.videoData
   },
   mutations: {
-    setVideoData(state, data) {
-      state.videoData = data
+        setVideoData(state, data) {
+      state.videoData = {
+        ...data.res,          
+        url: data.url,
+        formatEntries: data.formatEntries  // contains available formats
+      }
     }
   },
   actions: {
@@ -28,7 +32,7 @@ const store = createStore({
           body: JSON.stringify({ msg: url })
         })
         const data = await res.json()
-        commit('setVideoData', data.res)
+        commit('setVideoData', data)
       } catch (error) {
         console.error('Error fetching video data:', error)
       }
